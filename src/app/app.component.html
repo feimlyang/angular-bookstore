@@ -1,0 +1,16 @@
+<div class="container">
+  <p>Main Page</p>
+  <div class="nav-link">
+    <a [routerLink]="['/home']"> Home </a>
+    <a [routerLink]="['/about']"> About Us </a>
+    <a [routerLink]="['/contact']"> Contact Us </a>
+    <a [routerLink]="['/books']"> Books </a>
+    <a [routerLink]="['/admin']"> Admin </a>
+    <a [routerLink]="['/login']"> {{getLogin()}} </a>
+    <a [routerLink]="['/signup']"> Signup </a>
+  </div>
+</div>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

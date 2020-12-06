@@ -1,0 +1,19 @@
+<div class="alert alert-danger" role="alert" *ngIf="message">
+  {{ message }}
+</div>
+
+<div class="container" *ngIf="!isLoggedIn">
+  <div>
+    User Name : <input type="text" name="username" [(ngModel)]="username">
+    Password : <input type="password" name="password" [(ngModel)]="password">
+  </div>
+  <button (click)=checkLogin() class="btn btn-success">
+    Login
+  </button>
+</div>
+<div class="well" *ngIf="isLoggedIn">
+  <p>Logged in as <b>{{ loggedUser }}</b></p>
+  <button (click)=logout() class="btn btn-danger">
+    Log out
+  </button>
+</div>
